@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image & Video</title>
+    <style>
+        img{
+            height: 200px;
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>img 와 비디오</h2>
+    <hr>
+    <h3>이미지</h3>
+    <hr>
+    <!--
+        alt =>
+        1.이미지가 업을 경우 대체 텍스트를 제공한다.
+        2.이미지를 설명하여 접근성 관점에서 이미지를 
+        스크린 리더에게 알려줌으로써 이미지를 설명해준다. 
+        cf)width, height -> img의 속성이긴 하나, style정의를 통해서 
+                            지정하는 것이 바람직합니다.
+    -->
+    <img src="darth-vader.jpg" alt="피죤...">
+    <hr>
+    <h3>개와 고양이 가 올챙이 를 봤을 때</h3>
+    <hr>
+    <!-- html5 에서 제공하는 비디오 태그가 너무 허접하니까, 대부분 유튜브꺼는 그대로 퍼오면 되는데 직접 영상을 올려야 할 때는 
+    다른 사람들이 만든 비디오 태그를 가져올 것. Ex)video js ,==> video element는 HTML5 에서 공부하시고 
+    이 video 태그를 조종하는 것을 JS로 만들어낼 수 있다.
+    -->
+    <div class= "container">
+        <video src="test.mp4" alt ="개와고양이" width ="600px" poster="darth-vader.jpg" controls loop type="video/mp4" ></video>
+    </div>
+</body>
+</html>

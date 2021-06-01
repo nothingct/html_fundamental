@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From(1)</title>
+</head>
+<body>
+    <h3>폼요소 작성하기</h3>
+    <!-- action-> 해당 폼을 엑셀 파일 뭐 이런걸로 보내는거죠
+        다른 페이지로 이동하는 방법 : 1) 하이퍼링크 , 2) action 을 통해 <--post 방식 과 get 방식으로 정보전달. 
+        method = POST||GET (Default : GET : url?key=value&key2=value2 형태 key 값에 들어가는 값 : 각 태그의 name)
+        get방식 : 보안 에 유의해야 하는경우 적합하지 X, 보낼 수 있는 양이 한정(최대 255자)=>하이퍼링크는 다 GET 방식
+        ==> POST 방식 : 데이터 보내는 양 무한대, 보안 에 유의해야 할 경우 적합
+        소스페이지 의 [네트워크] 에서 확인 가능
+        save.html From Data : 에서 확인 이 가능하다. 
+    -->
+    <form action="save.html" method="post">
+        <!-- label for="태그ID" label 태그를 입력해도 해당 태그ID 안으로 들어가게 해줌
+            label 로 마크업 해주는 의미 도 있음. 이 입력이 어떤 입력인지 설명 
+            inpiut 태그 사용할 떄는 항상 label 로 감싸줘야한다.
+            input 태그 중 99% 가 다 text를 가장 많이 쓴다. 
+            <-mobile에선 text로 input설정할 때 와 email로 설정할 때 올라오는 자판이 달라: 편의성 고려해서 적절하게 선택할것.
+        -->
+        <div>
+            <label for="email">이메일<label> 
+            <input type="email" name = "email2" id ="email">
+        </div>
+        <div><!-- br 태그보다는 블록 태그로 묶어주는 것으로 개행.-->
+            <label for="pwd">비밀번호</label>
+            <input type="password" name="pwd2" id="pwd">    
+        </div>
+        <button type = "submit">로그인</button>
+        <button type = "reset">취소</button>
+    </form>
+    <a href="save.html?id=asdfasd&pwd=kadnfklasdnfkl">save</a>
+</body>
+</html>
